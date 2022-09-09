@@ -20,6 +20,65 @@ __      ___                 _______ _ _ _______    _                     _
  for X in banner:
   sys.stdout.write(X)
   sys.stdout.flush()
+banner();
+time = datetime.now()
+a=time.strftime("%d")
+h=int(time.strftime("%d"))
+ngày_trc=h-1
+b=time.strftime("%m")
+day=time.strftime("%d-%m-%Y")
+today=time.strftime("%d-%m-%Y")
+d=time.strftime("%d-%m")
+encodedBytes = base64.b64encode(d.encode("utf-8"))
+key = str(encodedBytes, "utf-8")
+long_url=(f"https://lequangminh591.tk/key-tool/?key={key}")
+api_token='3ce4783e6272d4c12338db7e2f88a402ca9a9196'
+url=requests.get(f'https://link1s.com/api?api={api_token}&url={long_url}').json()
+status=url['status']
+link=url['shortenedUrl']
+#lấy key
+file_key=f'key-ngày{a}.txt'
+file_key_cũ=f'key-ngày{ngày_trc}.txt'
+check_file_key=os.path.exists(file_key)
+if check_file_key == False:
+   print("\033[1;91m[\033[1;92mSpam_Momo\033[1;91m] \033[1;97m=> \033[1;91m ĐÂY LÀ TOOL FREE NÊN KEY SẼ TỰ ĐỘNG THAY ĐỔI MỖI NGÀY")
+   print(f'\033[1;32m  Link Lấy Key Free : \033[1;36m{link} ')
+   print(f' \033[1;34m┌─[\033[1;37m\033[1;42mVui Lòng Nhập Key Đã Vượt Link\033[0m\033[1;34m]')
+   while(True):
+      ma=input(f" \033[1;34m└──╼ \033[1;35m❯\033[1;36m❯\033[1;31m❯\033[1;32m Nhập Key\033[1;32m Ngày\033[1;37m {today}:\033[1;33m")
+      if ma == key:
+         print('\033[1;32m API Key Chính Xác')
+         luu=open(file_key, 'a+')
+         luu.write(ma)
+         luu.close()
+         break
+      elif ma != key:
+         print('\033[1;31m API Key Sai')
+elif check_file_key == True:
+  print('\033[1;32m Đang Lấy Key ...',end='\r')
+  sleep(2)
+  k=open(file_key, 'r')
+  ma=k.read()
+  k.close()
+  if ma == key:
+    print('\033[1;32m Lấy Key Thành Công       ',end='\r')
+    sleep(2)
+  elif ma != key:
+    if os.path.exists(file_key_cũ) == True:
+      os.system(f'rm {file_key_cũ}')
+    os.system(f'rm {file_key}')
+    print('\033[1;31m API Key Sai         ')
+    while(True):
+      ma=input(f"\033[1;37m[\033[1;31m✓\033[1;37m]\033[1;37m =>\033[1;32m Nhập API Key\033[1;32mNgày \033[1;37m{today}: \033[1;33m")
+      if ma == key:
+        print('\033[1;32m API Key Chính Xác')
+        luu=open(file_key, 'a+')
+        luu.write(ma)
+        luu.close()
+        break
+      elif ma != key:
+        print('\033[1;31m API Key Sai           ')
+os.system("cls" if os.name == "nt" else "clear")
 banner()
 VIDEO = input("\033[1;34mNhập Id Video TikTok : \033[1;33m")
 IID = "7136182505984493314", #"7138317669417174786"
