@@ -54,7 +54,7 @@ file_key=f'key-ngày{a}.txt'
 file_key_cũ=f'key-ngày{ngày_trc}.txt'
 check_file_key=os.path.exists(file_key)
 if check_file_key == False:
-   print("\033[1;91m[\033[1;92mSpam_Momo\033[1;91m] \033[1;97m=> \033[1;91m ĐÂY LÀ TOOL FREE NÊN KEY SẼ TỰ ĐỘNG THAY ĐỔI MỖI NGÀY")
+   print("\033[1;91m[\033[1;92mView-TikTok\033[1;91m] \033[1;97m=> \033[1;91m ĐÂY LÀ TOOL FREE NÊN KEY SẼ TỰ ĐỘNG THAY ĐỔI MỖI NGÀY")
    print(f'\033[1;32m  Link Lấy Key Free : \033[1;36m{link} ')
    print(f' \033[1;34m┌─[\033[1;37m\033[1;42mVui Lòng Nhập Key Đã Vượt Link\033[0m\033[1;34m]')
    while(True):
